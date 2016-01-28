@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Pixel Viewer | View different pixel sizes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
 <style>
     header, footer {
@@ -10,9 +11,10 @@
         padding: 30px;
     }
     #pixels {
-        border: 5px solid black;
+        border: 3px solid black;
         margin-left: auto;
         margin-right: auto;
+        text-align: center;
     }
     tr, td {
         text-align: left;
@@ -48,6 +50,7 @@
       $('#height').val(hw[1]);
       $('#width, #height').trigger('input');
     });
+    $('#width, #height').trigger('input');
   });
 </script>
 </head>
@@ -56,7 +59,7 @@
     <h1>View pixel sizes on your monitor</h1>
     <p>Enter your pixels here</p>
     <div class="form-group">
-        <input class="form-control" placeholder="Width" id="width" type="text"/> x <input class="form-control" placeholder="Height" id="height" type="text"/>
+        <input class="form-control" value="400" placeholder="Width" id="width" type="text"/> x <input class="form-control" value="50" placeholder="Height" id="height" type="text"/>
     </div>
   </header>
   <div id="pixels"></div>
